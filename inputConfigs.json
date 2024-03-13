@@ -1,0 +1,52 @@
+{
+    "index": "vehicle-party-prod",
+    "queryToSearch": {
+        "size": 10000,
+        "query": {
+            "match": {
+                "ownerInfo.organization": true
+            }
+        },
+        "fields": [
+            "vehicleId",
+            "country",
+            "registrationData.*",
+            "detail.*"
+        ],
+        "_source": false,
+        "sort": [
+            {
+                "detail.chassisNumber.keyword": {
+                    "order": "asc"
+                }
+            }
+        ]
+    },
+    "individual_fields": [
+        "vehicleId",
+        "country",
+        "registrationNumber",
+        "deRegistrationText",
+        "deRegistrationReason",
+        "deRegisteredOn",
+        "registeredOn",
+        "vehicleType",
+        "vehicleCategory",
+        "vehicleBrand",
+        "vehicleModel",
+        "vehicleBrandRaw",
+        "vehicleModelRaw",
+        "vehicleModelYear",
+        "vehicleYear",
+        "color",
+        "chassisNumber",
+        "modelNumber",
+        "groupNumber",
+        "manufacturer",
+        "manufacturingDate",
+        "registrationDate",
+        "registrationNumberReused",
+        "vehicleImpactClass",
+        "EPA"
+    ]
+}
